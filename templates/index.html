@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block title %}
+  Login
+{% endblock %}
+{% block content %}
+        <form class="index_form" action="{{ url_for('verify') }}"method="post">
+          <img src="{{ url_for('static', filename='emblem.jpeg') }}" height="20%" width="60%">
+          <h1>Sign In!</h1>
+          <input type="text" name="name" placeholder="Username">
+          <br>
+          <br>
+          <input type="password" name="password" placeholder="Password">
+          <br>
+          <br>
+          <button>Log In!</button>
+          <br>
+          <a href="{{ url_for('register_page') }}">Do not have an account?</a>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+        </form>
+{% endblock %}

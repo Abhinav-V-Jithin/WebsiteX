@@ -1,0 +1,67 @@
+.index_form
+{
+  box-sizing: 100px;
+  text-align: center;
+  border: 5px solid black;
+  padding: 20px;
+  margin-top: 50px;
+  margin-left: 500px;
+  margin-right: 500px;
+  background: white;
+}
+.index_form h1
+{
+  color: blue;
+}
+.index_form input
+{
+  height: 30px;
+  width: 200px;
+}
+.index_form input:hover
+{
+  border-color: #99ccff;
+}
+/*.index_form button
+{
+  color: white;
+  background-color: #0073e6;
+  height: 50px;
+  width: 200px;
+}
+.index_form button:hover
+{
+  background-color: #0059b3;
+  border-color: #80bfff;
+}
+.index_form button:active
+{
+  background-color: #001f4d;
+}
+*/
+.Already_logged_in button
+{
+  color: white;
+  background-color: #0073e6;
+  height: 50px;
+  width: 200px;
+}
+.Already_logged_in button:hover
+{
+  background-color: #0059b3;
+  border-color: #80bfff;
+}
+.Already_logged_in button:active
+{
+  background-color: #001f4d;
+}
+.book_box
+{
+  border-color: black;
+  border: 10px solid black;
+  border-collapse: collapse;
+}
+.book_box button
+{
+  background-color: white;
+}

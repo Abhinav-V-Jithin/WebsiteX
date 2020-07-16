@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='logo.jpeg') }}">
+    <style>
+    body
+    {
+      background: url('https://video-images.vice.com/articles/5d44c9622980b0000824a7e3/lede/1564789576071-GettyImages-949118068.jpeg?crop=1xw:0.8419xh;0xw,0.1581xh');
+      background-size: 100%;
+    }
+    form.logout_button
+    {
+      float:right;
+    }
+    form.logout_button:hover
+    {
+      border-color: black;
+    }
+    *
+    {
+      box-sizing: border-box;
+    }
+    .box {
+  float: left;
+  width: 32%;
+  height: 250px;
+  padding: 50px;
+  color: white;
+  background-color: black;
+  border: 5px solid white;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.container
+{
+  margin-left: 400px;
+  box-sizing: border-box;
+}
+    .menu
+    {
+      height: 100%;
+      width: 400px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: black;
+      overflow-x: visible;
+      padding-top: 20px;
+    }
+    .menu a
+    {
+      width: 400px;
+      color: white;
+      text-align: center;
+      background-color: black;
+    }
+    *
+    {
+      box-sizing: border-box;
+    }
+    form.search_box input[type=text]
+    {
+      padding: 10px;
+      font-size: 17px;
+      border: 1px solid grey;
+      float: left;
+      width: 80%;
+      background: #f1f1f1;
+    }
+
+    form.search_box button
+    {
+      float: left;
+      width: 20%;
+      padding: 10px;
+      background: #2196F3;
+      color: white;
+      font-size: 17px;
+      border: 1px solid grey;
+      border-left: none;
+      cursor: pointer;
+    }
+
+    form.search_box button:hover
+    {
+      background: #0b7dda;
+    }
+
+    form.search_box::after
+    {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    .errors
+    {
+      box-sizing: 1000px;
+      text-align: center;
+      padding: 10px;
+      margin-top: 50px;
+      margin-left: 500px;
+      margin-right: 500px;
+      color: red;
+      background: white;
+      border: 5px solid red;
+    }
+    </style>
+  </head>
+    <body>
+      {% block content %}
+      {% endblock %}
+    </body>
+</html>

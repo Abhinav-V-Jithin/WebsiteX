@@ -1,0 +1,45 @@
+{% extends "book_layout.html" %}
+{% block title %}
+  Book Store
+{% endblock %}
+{% block content %}
+  <div class="menu">
+    <img src="{{ url_for('static', filename='logo.png') }}" height="200" width="400" hspace="5">
+    <br>
+    <a href="{{ url_for('About') }}"><h1>About</h1></a>
+    <hr style="border: 2px solid#5b9aa0;" />
+    <a href="{{ url_for('documentation') }}"><h1>Documentation</h1></a>
+    <hr style="border: 2px solid#5b9aa0;" />
+  </div>
+  <form class="search_box" method="post" action="{{ url_for('search') }}" style="margin:auto;max-width:700px">
+    <input type="text" name="search2" placeholder="Search for books">
+    <button type="submit"><i class="fa fa-search"></i></button>
+  </form>
+  {% if stat=='logged in' %}
+  <form action="{{ url_for('logout') }}" method="post" class="logout_button">
+  <button style="background-color: #0390fc;"><img src="{{ url_for('static', filename='logout.png')}}" height="30"width="50"></button>
+  </form>
+  <h1 style="margin-left:500px;">{{ username }}, Welcome back to Book Store!<br>
+  {% else %}
+  <form style="margin-right:10px"action="{{ url_for('index') }}" method="post" class="logout_button">
+  <button style="background-color: #0390fc;"><img src="{{ url_for('static', filename='login.png')}}" height="30"width="50"></button>
+  </form>
+  <h1 style="margin-left:500px;">Welcome to WebsiteX Book Store<br>
+  {% endif %}
+  Here are the top books on Good Reads.</h1>
+  <div class="container">
+  <div class="clearfix">
+    {% for i in range(0, 50) %}
+    <div class="box">
+      <a href="{{ url_for('books_details', isbn=isbns[i]) }}">
+      Author:{{ authors[i] }}<br>
+      Title :{{ titles[i] }}<br>
+      Year  :{{ years[i] }}<br>
+      rating:{{ ratings[i] }}<br>
+      isbn  :{{ isbns[i] }}<br>
+      </a>
+      </div>
+    {% endfor %}
+      </div>
+      </div>
+{% endblock %}

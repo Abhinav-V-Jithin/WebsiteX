@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block title %}
+  Register
+{% endblock %}
+{%  block content %}
+  <form class="index_form" action="{{ url_for('register') }}" method="post">
+    <img src="{{ url_for('static', filename='emblem.jpeg')}}" height="20%" width="60%">
+    <br>
+    <input type="text" name="username" placeholder="Your username">
+    <br>
+    <br>
+    <input type="password" name="password" placeholder="Your password">
+    <br>
+    <br>
+    <button>Register!</button><br>
+    <a href="{{ url_for('index') }}" methods="POST">Already have an Accout!</a>
+  </form>
+{% endblock %}
